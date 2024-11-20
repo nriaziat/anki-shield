@@ -1,6 +1,11 @@
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your overlay
+#include "my_keyboard-layouts.dtsi"
 
 / {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,physical-layout = &physical_layout0;
+    };
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <5>; // Length of the "col-gpios" array
